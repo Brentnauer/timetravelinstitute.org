@@ -1,0 +1,13 @@
+.section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.rich-text h1 {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+}
+
+.rich-text a {
+  color: hsla(0, 100.00%, 50.00%, 1.00);
+}
