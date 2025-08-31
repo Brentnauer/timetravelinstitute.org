@@ -75,7 +75,7 @@ export function Header2({ as: _Component = _Builtin.Section }) {
                     button={false}
                     block=""
                     options={{
-                      href: "#",
+                      href: "/history",
                     }}
                   >
                     {"History"}
@@ -87,7 +87,7 @@ export function Header2({ as: _Component = _Builtin.Section }) {
                     button={false}
                     block=""
                     options={{
-                      href: "#",
+                      href: "/artifacts",
                     }}
                   >
                     {"Artifacts"}
@@ -97,7 +97,7 @@ export function Header2({ as: _Component = _Builtin.Section }) {
                     button={false}
                     block=""
                     options={{
-                      href: "#",
+                      href: "/people",
                     }}
                   >
                     {"People"}

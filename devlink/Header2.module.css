@@ -148,7 +148,7 @@
 }
 
 .nav-link:hover {
-  color: rgba(26, 27, 31, 0.75);
+  color: hsla(228, 0.00%, 100.00%, 0.75);
 }
 
 .nav-link:focus-visible {

@@ -14,5 +14,6 @@ export * from "./Cta";
 export * from "./DevLinkProvider";
 export * from "./Header2";
 export * from "./HeaderPrimary";
+export * from "./HomeCards";
 export * from "./RichText";
 export * from "./Section";

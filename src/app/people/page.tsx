@@ -1,7 +1,5 @@
-// src/app/page.tsx
-import { Header2 } from "../../devlink/Header2";
-import { Section } from "../../devlink/Section";
-import { HomeCards } from "../../devlink/HomeCards";
+import { Header2 } from "../../../devlink/Header2";
+import { Section } from "../../../devlink/Section";
 import { getPostById } from "@/lib/wp";
 
 export default async function Page() {
@@ -11,7 +9,6 @@ export default async function Page() {
   return (
     <>
       <Header2 />
-      <HomeCards />
       <Section
         contentSlot={
           <article
