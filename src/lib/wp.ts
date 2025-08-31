@@ -12,7 +12,7 @@ if (!WP_BASE) {
 export async function getPostById(id: number): Promise<WPPost> {
   const res = await fetch(
     `${WP_BASE}/wp-json/wp/v2/posts/${id}?_fields=id,title,content`,
-    { next: { revalidate: 60 } } // ISR; set { cache: "no-store" } for true live
+    { cache: "no-store" }
   );
   if (!res.ok) throw new Error(`Failed to fetch post ${id}`);
   return res.json();

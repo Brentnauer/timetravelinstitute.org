@@ -1,10 +1,17 @@
 "use client";
 import React from "react";
 import * as _Builtin from "./_Builtin";
+import * as _interactions from "./interactions";
 import * as _utils from "./utils";
 import _styles from "./Header2.module.css";
 
+const _interactionsData = JSON.parse(
+  '{"events":{"e":{"id":"e","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-2"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"777af7a3-596c-3365-48a0-0ceb6cd8cf83","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"777af7a3-596c-3365-48a0-0ceb6cd8cf83","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1756606172634}},"actionLists":{"a":{"id":"a","title":"New Timed Animation","actionItemGroups":[],"useFirstGroupAsInitialState":false,"createdOn":1756607283590}},"site":{"mediaQueries":[{"key":"main","min":992,"max":10000},{"key":"medium","min":768,"max":991},{"key":"small","min":480,"max":767},{"key":"tiny","min":0,"max":479}]}}'
+);
+
 export function Header2({ as: _Component = _Builtin.Section }) {
+  _interactions.useInteractions(_interactionsData, _styles);
+
   return (
     <_Component
       className={_utils.cx(_styles, "navbar-logo-left")}
@@ -41,13 +48,16 @@ export function Header2({ as: _Component = _Builtin.Section }) {
                 href: "#",
               }}
             >
-              <_Builtin.Image
-                loading="lazy"
-                width="auto"
-                height="auto"
-                alt="This is the logo."
-                src="https://cdn.prod.website-files.com/68b2e40104c2e49f82d6f052/68b32fffdc6a6e119cdc45df_tti-logo.webp"
-              />
+              <_Builtin.Block
+                className={_utils.cx(_styles, "logo")}
+                data-w-id="777af7a3-596c-3365-48a0-0ceb6cd8cf83"
+                tag="div"
+              >
+                {"TTI"}
+                <_Builtin.Span className={_utils.cx(_styles, "logo-org")}>
+                  {".org"}
+                </_Builtin.Span>
+              </_Builtin.Block>
             </_Builtin.NavbarBrand>
             <_Builtin.NavbarMenu
               className={_utils.cx(_styles, "nav-menu-wrapper")}
@@ -68,7 +78,7 @@ export function Header2({ as: _Component = _Builtin.Section }) {
                       href: "#",
                     }}
                   >
-                    {"Feature"}
+                    {"History"}
                   </_Builtin.Link>
                 </_Builtin.ListItem>
                 <_Builtin.ListItem>
@@ -80,10 +90,8 @@ export function Header2({ as: _Component = _Builtin.Section }) {
                       href: "#",
                     }}
                   >
-                    {"User Examples"}
+                    {"Artifacts"}
                   </_Builtin.Link>
-                </_Builtin.ListItem>
-                <_Builtin.ListItem>
                   <_Builtin.Link
                     className={_utils.cx(_styles, "nav-link")}
                     button={false}
@@ -92,64 +100,8 @@ export function Header2({ as: _Component = _Builtin.Section }) {
                       href: "#",
                     }}
                   >
-                    {"Pricing"}
+                    {"People"}
                   </_Builtin.Link>
-                </_Builtin.ListItem>
-                <_Builtin.ListItem>
-                  <_Builtin.DropdownWrapper
-                    className={_utils.cx(_styles, "nav-dropdown")}
-                    tag="div"
-                    delay={0}
-                    hover={false}
-                  >
-                    <_Builtin.DropdownToggle
-                      className={_utils.cx(_styles, "nav-dropdown-toggle")}
-                      tag="div"
-                    >
-                      <_Builtin.Icon
-                        className={_utils.cx(_styles, "nav-dropdown-icon")}
-                        widget={{
-                          type: "icon",
-                          icon: "dropdown-toggle",
-                        }}
-                      />
-                      <_Builtin.Block tag="div">{"Resources"}</_Builtin.Block>
-                    </_Builtin.DropdownToggle>
-                    <_Builtin.DropdownList
-                      className={_utils.cx(
-                        _styles,
-                        "nav-dropdown-list",
-                        "shadow-three",
-                        "mobile-shadow-hide"
-                      )}
-                      tag="nav"
-                    >
-                      <_Builtin.DropdownLink
-                        className={_utils.cx(_styles, "nav-dropdown-link")}
-                        options={{
-                          href: "#",
-                        }}
-                      >
-                        {"Resource Link 1"}
-                      </_Builtin.DropdownLink>
-                      <_Builtin.DropdownLink
-                        className={_utils.cx(_styles, "nav-dropdown-link")}
-                        options={{
-                          href: "#",
-                        }}
-                      >
-                        {"Resource Link 2"}
-                      </_Builtin.DropdownLink>
-                      <_Builtin.DropdownLink
-                        className={_utils.cx(_styles, "nav-dropdown-link")}
-                        options={{
-                          href: "#",
-                        }}
-                      >
-                        {"Resource Link 3"}
-                      </_Builtin.DropdownLink>
-                    </_Builtin.DropdownList>
-                  </_Builtin.DropdownWrapper>
                 </_Builtin.ListItem>
                 <_Builtin.ListItem>
                   <_Builtin.Block
@@ -163,10 +115,10 @@ export function Header2({ as: _Component = _Builtin.Section }) {
                     button={false}
                     block=""
                     options={{
-                      href: "#",
+                      href: "https://timetravelinstitute.com",
                     }}
                   >
-                    {"Docs"}
+                    {"Back to the BBS"}
                   </_Builtin.Link>
                 </_Builtin.ListItem>
               </_Builtin.List>
